@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+fieldset{
+    border: 0;
+}
+
+body{
+    background: #F6F8FF;
+    opacity: 0.9;
+    font-family: 'Poppins';
+    font-size: 1em;
+    margin-left: 21px;
+
+    justify-content: center;
+}
+
+.subtitulo{
+    margin-top: 13px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+
+    color: #002554;
+}
+
+.botao{
+    font-size: 1.2em;
+    background: #000066;
+    box-shadow: 0px 4px 4px rgba(0, 71, 187, 0.06);
+    border-radius: 8px;
+    padding: 8px 116px 8px 117px;
+    border: 0;
+    color: #FFFFFF;
+    margin-top: 20px;
+    margin-bottom: 23px;
+}
+
