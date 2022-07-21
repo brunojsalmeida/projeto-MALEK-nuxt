@@ -1,28 +1,52 @@
 <template>
   <div>
-    <p class="subtitulo">Minha marca</p>
-        <br>
+     <p class="subtitulo">Minha marca</p>
+     <br>
 
     <label class="picture" for="picture__input" tabindex="0">
     <input type="file" accept="image/*" class="picture__input" />
-    <div class="container">
+    <div class="d-flex flex-column gap-2 align-items-center">
         <img class="pb-4" src="~assets/upload.svg" alt="Upload">
-        <span class="picture__image">Clique para enviar sua logo</span>
+        <span class="text-decoration-underline">Clique para enviar sua logo</span>
         <span class="legenda">PNG, JPG (tamanho máximo X)</span>
     </div>
     </label>
 
-    <div class="container-2">
+    <div class="d-flex flex-column justify-content-between align-items-center">
         <button class="botao-outline" type="button">Salvar</button>
 
-        <button class="botao" type="submit">Avançar</button>
+        <b-button class="botao" v-b-modal.modal-1>Avançar</b-button>
     </div>
 
-  </div>
+    <b-modal id="modal-1">
+    <div class="d-flex flex-column gap-2 align-items-center">
+            <img src="~assets/email.svg" alt="Message">
+            <h3>Verifique seu e-mail</h3>
+            <p>Foi encaminhado um email para <br> email@gmail.com</p>
+            <br>
+            <p class="text-decoration-underline">Clique aqui para realizar o LOGIN</p>
+        </div>
+    </b-modal>
+
+ </div>
+
+<!--
+
+<div>
+  <b-button v-b-modal.modal-1>Launch demo modal</b-button>
+
+  <b-modal id="modal-1" title="BootstrapVue">
+    <p class="my-4">Hello from modal!</p>
+  </b-modal>
+</div>
+-->
 </template>
 
 <script>
-/*
+export default {
+    layout: 'form',
+
+    /*
     const inputFile = document.querySelector('#picture__input');
     const pictureImage = document.querySelector('.picture__image');
     const pictureImageTxt = "Clique para enviar sua logo";
@@ -53,8 +77,7 @@
         }
     });
 */
-export default {
-    layout: 'form',
+
 }
 </script>
 
@@ -64,22 +87,8 @@ export default {
     display: none;
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-}
-
-.container-2{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
 .picture{
-    width: 319px;
+    width: 100%;
     height: 210px;
     margin-top: 62px;
     cursor: pointer;
@@ -93,7 +102,6 @@ export default {
     font-weight: 500;
     font-size: 14px;
     line-height: 150%;
-    text-decoration-line: underline;
     color: #6B6E84;
 
     background: #FFFFFF;
@@ -106,8 +114,29 @@ export default {
     font-weight: 400;
     font-size: 12px;
     line-height: 150%;
+    text-decoration-line: none;
 
     color: #6B6E84;
+}
+
+h3{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #2E328C;
+}
+
+p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #667085;
 }
 
 .picture__img {
@@ -130,6 +159,22 @@ export default {
 
     margin-top: 20px;
     margin-bottom: 50px;
+
+    width: 100%;
 }
+
+@media (max-width: 360px){
+    .botao-outline{
+        padding: 8px 70px 8px 70px;
+    }
+}
+
+@media (max-width: 500px){
+    .botao-outline{
+        width: 100%;
+    }
+
+}
+
 
 </style>
