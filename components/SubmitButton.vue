@@ -1,12 +1,13 @@
 <template>
   <div>
-    <Nuxt />
+    <button class="botao" type="submit" > <slot /></button>
+
   </div>
 </template>
 
 <script>
 export default {
-
+    
 }
 </script>
 

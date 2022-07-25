@@ -21,18 +21,15 @@
             <input type="text" class="form-control" id="cfp/cnpj" placeholder="000.000.000-00">
         </div>
 
-        <div class="mb-3 col-12">
-            <label for="form-control" class="form-label">Email *</label>
-            <input type="email" class="form-control" id="email" placeholder="name@example.com">
-          </div>
+        <InputEmail > E-mail * </InputEmail>
 
           <div class="d-flex gap-1">
-            <div class="form-group col-3">
+            <div class=" col-3">
                 <label for="ddd">DDD *</label>
                 <input type="text" class="form-control" id="DDD" placeholder="00">
-              </div>
+            </div>
     
-              <div class="form-group col-9">
+              <div class="col-9">
                 <label for="tel">Telefone *</label>
                 <input type="text" class="form-control" id="tel" placeholder="00000-0000">
               </div>
@@ -72,7 +69,7 @@
             </div>
         </fieldset>
 
-        <button class="botao" type="submit">Avançar</button>
+        <SubmitButton > Avançar </SubmitButton>
     </form>
 
 
@@ -81,22 +78,22 @@
 </template>
 
 <script>
+import SubmitButton from '../components/SubmitButton.vue';
+import InputEmail from '../components/InputEmail.vue';
 
 export default {
-    layout: 'form',
-
+    layout: "form",
+    components: { SubmitButton, InputEmail }
 }
 </script>
 
 <style>
 
 label{
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 150%;
-
 
 
     color: #5B5B5B;

@@ -15,8 +15,11 @@
     <div class="d-flex flex-column justify-content-between align-items-center">
         <button class="botao-outline" type="button">Salvar</button>
 
-        <b-button class="botao" v-b-modal.modal-1>Avançar</b-button>
+
+        
     </div>
+
+    <SubmitButton v-b-modal.modal-1> Avançar </SubmitButton>
 
     <b-modal id="modal-1">
     <div class="d-flex flex-column gap-2 align-items-center">
@@ -30,53 +33,12 @@
 
  </div>
 
-<!--
-
-<div>
-  <b-button v-b-modal.modal-1>Launch demo modal</b-button>
-
-  <b-modal id="modal-1" title="BootstrapVue">
-    <p class="my-4">Hello from modal!</p>
-  </b-modal>
-</div>
--->
-</template>
+ 
+ </template>
 
 <script>
 export default {
     layout: 'form',
-
-    /*
-    const inputFile = document.querySelector('#picture__input');
-    const pictureImage = document.querySelector('.picture__image');
-    const pictureImageTxt = "Clique para enviar sua logo";
-    pictureImage.innerHTML = pictureImageTxt;
-
-    inputFile.addEventListener('change', function(e){
-        const inputTarget = e.target;
-        const file = inputTarget.files[0];
-
-        if(file) {
-            const reader = new FileReader();
-
-            reader.addEventListener('load', function(e){
-                const readerTarget = e.target;
-
-                const img = document.createElement('img');
-                img.src = readerTarget.result;
-                img.classList.add('picture__img');
-                
-                pictureImage.innerHTML = '';
-
-                pictureImage.appendChild(img);
-            });
-
-            reader.readAsDataURL(file);
-        } else {
-            pictureImage.innerHTML = pictureImageTxt;
-        }
-    });
-*/
 
 }
 </script>
@@ -97,7 +59,6 @@ export default {
     align-items: center;
     justify-content: center;
 
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -109,7 +70,6 @@ export default {
 }
 
 .legenda{
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -120,7 +80,6 @@ export default {
 }
 
 h3{
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -149,8 +108,7 @@ p{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
     border-radius: 8px;
     padding: 8px 125px 8px 125px;
-    
-    font-family: 'Poppins';
+
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
