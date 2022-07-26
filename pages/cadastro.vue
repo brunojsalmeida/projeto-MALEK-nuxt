@@ -3,7 +3,7 @@
         <p class="subtitulo">Minhas informações</p>
         <br>
 
-    <form class="mt-5">
+    <form class="mt-5" action="" @submit="enviarFormulario($event)">
         <fieldset class="d-flex gap-1">
             <div class="mb-3 col-6">
                 <label for="form-control" class="form-label">Nome *</label>
@@ -83,7 +83,15 @@ import InputEmail from '../components/InputEmail.vue';
 
 export default {
     layout: "form",
-    components: { SubmitButton, InputEmail }
+    components: { SubmitButton, InputEmail },
+    methods: {
+        enviarFormulario(e) {
+
+            e.preventDefault();
+
+            console.log("Formulário Enviado!");
+        }
+    }
 }
 </script>
 
